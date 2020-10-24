@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "compass-bearing",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Get the relative compass bearing of a set of coordinates from another set.",
+	"repository": "https://github.com/Richienb/compass-bearing.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,7 +17,15 @@
 		"lint": "xo",
 		"test": "xo && ava"
 	},
-	"keywords": [],
+	"keywords": [
+		"compass",
+		"bearing",
+		"math",
+		"relative",
+		"coordinate",
+		"angle",
+		"degree"
+	],
 	"dependencies": {},
 	"devDependencies": {
 		"ava": "^3.13.0",

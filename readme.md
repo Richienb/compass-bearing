@@ -1,41 +1,30 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# compass-bearing [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/compass-bearing/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/compass-bearing)
 
-My awesome module.
+Get the [relative](https://en.wikipedia.org/wiki/Relative_bearing) [compass bearing](https://en.wikipedia.org/wiki/Bearing_(navigation)) of a set of coordinates from another set.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/compass-bearing.png)](https://npmjs.com/package/compass-bearing)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install compass-bearing
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module")
+const compassBearing = require("compass-bearing")
 
-theModule("unicorns")
-//=> "unicorns & rainbows"
+compassBearing([10, 10], [20, 20])
+//=> 45
 ```
 
 ## API
 
-### theModule(input, options?)
+### compassBearing([startX, startY], [endX, endY])
 
-#### input
+#### startX, startY, endX, endY
 
-Type: `string`
+Type: `number`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The starting and ending coordinates to get the relative bearing from. Returns a degree from `0` up to (but excluding) `360`.

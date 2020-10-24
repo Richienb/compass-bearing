@@ -1,13 +1,8 @@
 const test = require("ava")
-const theModule = require(".")
+const compassBearing = require(".")
 
 test("main", t => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number"
-	})
-
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+	t.is(compassBearing([10, 10], [20, 20]), 45)
+	t.is(compassBearing([0, 0], [0, 10]), 0)
+	t.is(compassBearing([0, 0], [0, -10]), 180)
 })

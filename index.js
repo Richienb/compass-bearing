@@ -1,9 +1,16 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-	if (typeof input !== "string") {
-		throw new TypeError(`Expected a string, got ${typeof input}`)
+const assertNumber = value => {
+	if (typeof value !== "number") {
+		throw new TypeError(`Expected a number, got ${typeof value}`)
 	}
+}
 
-	return `${input} & ${postfix}`
+module.exports = ([startX, startY], [endX, endY]) => {
+	assertNumber(startX)
+	assertNumber(startY)
+	assertNumber(endX)
+	assertNumber(endY)
+
+	return Math.atan2(endX - startX, endY - startY) * 180 / Math.PI
 }
