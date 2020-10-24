@@ -1,6 +1,6 @@
 {
 	"name": "compass-bearing",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Get the relative compass bearing of a set of coordinates from another set.",
 	"repository": "https://github.com/Richienb/compass-bearing.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
